@@ -1,13 +1,17 @@
+import { useState } from "react"
 import Navbar from "./components/navbar"
-import Home from "./components/sections/home"
+import HomeSection from "./components/sections/home"
+import { ISectionContext, SectionContext, SectionProvider } from "./contexts/use-section"
 
 function App() {
-
   return (
-    <div className="bg-primary flex flex-col w-full h-screen border-4 hero-border">
-      <Navbar />
-      <Home />
-    </div>
+    <SectionProvider>
+      <div className="bg-primary flex flex-col w-full h-screen border-4 hero-border">
+        <Navbar />
+        <HomeSection />
+      </div>
+    </SectionProvider>
+
   )
 }
 

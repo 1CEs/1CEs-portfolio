@@ -3,9 +3,7 @@ import Button from '../button'
 import bookIcon from '../../../public/images/book_icon.png'
 import textIcon from '../../../public/images/text_icon.png'
 
-type Props = {}
-
-const Home: React.FC = (props: Props) => {
+const HomeSection: React.FC = () => {
     const actions = [
         {
             content: "About Me",
@@ -21,7 +19,7 @@ const Home: React.FC = (props: Props) => {
 
     return (
         <div className='w-full h-full flex flex-col justify-center gap-y-3 items-center'>
-            <h1 className='text-3xl'>Hi, I’m <span className='text-purple'>Songwut Malisri</span></h1>
+            <h1 className='text-3xl'>Hi, I’m <span className='text-purple hover:underline'>Songwut Malisri</span></h1>
             <p className='text-2xl max-w-[50%] indent-10'>{introduction}</p>
             <div className='flex gap-x-3'>
                 {
@@ -40,4 +38,4 @@ const Home: React.FC = (props: Props) => {
     )
 }
 
-export default Home
+export default HomeSection
