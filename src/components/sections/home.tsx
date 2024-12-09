@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../button'
-import bookIcon from '../../../public/images/book_icon.png'
-import textIcon from '../../../public/images/text_icon.png'
+import bookIcon from '/images/book_icon.png'
+import textIcon from '/images/text_icon.png'
 
 const HomeSection: React.FC = () => {
     const actions = [

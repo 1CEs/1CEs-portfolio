@@ -18,3 +18,8 @@ body {
   @apply border-r-primary-100 border-b-primary-100
   border-l-white-100 border-t-white-100
 }
+
+.hero-border-secondary {
+  @apply border-r-primary-100 border-b-primary-100
+  border-l-black border-t-black
+}
