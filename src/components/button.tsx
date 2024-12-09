@@ -11,9 +11,8 @@ const Button: React.FC<ButtonProps> = ({ children, isBordered, ...props }) => {
             {...props}
         >
             <div
-                className='w-full h-full border-r-primary-100 border-b-primary-100
-                           border-l-white-100 border-t-white-100 border-2 bg-primary py-1 px-2
-                           active:bg-primary-active'
+                className='w-full h-full hero-border border-2 bg-primary py-1 px-2
+                           active:bg-primary-active flex items-center justify-center'
             >
                 {children}
             </div>

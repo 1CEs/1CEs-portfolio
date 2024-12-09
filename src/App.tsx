@@ -1,13 +1,12 @@
-import Button from "./components/button"
+import Navbar from "./components/navbar"
+import Home from "./components/sections/home"
 
 function App() {
 
   return (
-    <div className="hero-bg flex w-full h-screen justify-center items-center relative overflow-hidden">
-      
-      <Button isBordered>
-        Hello
-      </Button>
+    <div className="bg-primary flex flex-col w-full h-screen border-4 hero-border">
+      <Navbar />
+      <Home />
     </div>
   )
 }

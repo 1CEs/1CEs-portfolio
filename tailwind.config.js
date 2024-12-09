@@ -17,6 +17,7 @@ export default {
           100: "#adaaa3",
           "active": "#bcb9b1"
       },
+      "purple": "#6f75a6"
     }
   },
   plugins: [],
