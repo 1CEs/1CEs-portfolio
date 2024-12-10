@@ -11,7 +11,10 @@ export default {
           DEFAULT: "#FFFFFF",
           100: "#EEEEEE"
       },
-      "black": "#000",
+      "black": {
+          DEFAULT: "#000000",
+          100: "#505050"
+      },
       "primary": {
           DEFAULT: "#d4d0c7",
           100: "#adaaa3",

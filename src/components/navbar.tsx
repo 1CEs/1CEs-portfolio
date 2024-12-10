@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import fileIcon from '../../public/images/file_icon.png'
+import fileIcon from '/images/file_icon.png'
 import Button from './button'
 import { ISectionContext, SectionContext } from '../contexts/use-section'
 

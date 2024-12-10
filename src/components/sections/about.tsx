@@ -1,28 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Button from '../button'
 import MyselfOption from './options/myself'
+import { IOptionContext, OptionContext } from '../../contexts/use-option'
+import MatchOption from './options/match-option'
 
 const AboutSection: React.FC = () => {
-    const contentOptions = ["myself", "skill & tools", "education", "contact"]
+    const contentOptions = ["myself", "skills & tools", "education", "contact"]
+    const { option, setOption } = useContext(OptionContext)!
     return (
         <div className='flex flex-row gap-x-4'>
-            <div className='flex basis-1/4 h-fit'>
+            <div className='flex basis-2/6 h-fit'>
                 <fieldset className='p-3 border border-black w-full'>
                     <legend className='text-center'>Content</legend>
                     <ul>
                         {
-                            contentOptions.map((option: string, idx: number) => (
-                                <li key={idx} className='w-full'>
-                                    <Button textAlign='start' className='w-full'>{option}</Button>
+                            contentOptions.map((_option: string, idx: number) => (
+                                <li key={idx} onClick={() => setOption(_option as IOptionContext["option"])} className='w-full'>
+                                    <Button textAlign='start' className={`w-full`}>{option == _option && '>'} {_option}</Button>
                                 </li>
                             ))
                         }
                     </ul>
                 </fieldset>
             </div>
-            <div className='pt-3 w-full h-full'>
-                <div className='flex pt-2 basis-3/4 hero-border-secondary border-2 bg-white p-2'>
-                    <MyselfOption />
+            <div className='pt-3 w-full h-full basis-4/6'>
+                <div className='flex hero-border-secondary border-2 bg-white-100 max-h-[800px] overflow-y-scroll'>
+                    <MatchOption />
                 </div>
             </div>
 
