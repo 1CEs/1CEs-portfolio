@@ -21,17 +21,13 @@ body {
 
 .hero-border-secondary {
   @apply border-r-primary-100 border-b-primary-100
-  border-l-black border-t-black
+  border-l-primary-100 border-t-primary-100
 }
 
 ::-webkit-scrollbar {
+  -webkit-appearance: none;
   width: 16px;
   height: 16px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-white-100 border;
-  border: 1px solid #505050;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-type Props = {}
-
-const SkillOption = (props: Props) => {
+const SkillOption: React.FC = () => {
     const [select, setSelect] = useState<string | null>(null)
+    const [doubleClick, setDoubleClick] = useState<string | null>(null)
     const skills = [
         {
             name: "HTML 5",
@@ -120,12 +119,16 @@ const SkillOption = (props: Props) => {
                 skills.map((skill: typeof skills[0], idx: number) => (
                     <div
                         key={idx}
-                        onClick={() => setSelect(skill.name)}
+                        onDoubleClick={() => setDoubleClick(skill.name)}
+                        onClick={() => {
+                            setSelect(skill.name)
+                            setDoubleClick(null)
+                        }}
                         className={`flex flex-col justify-center items-center w-20 h-20 rounded-sm
                                     cursor-pointer ${skill.name == select && 'border-dashed border-black-100 border'}`}
                     >
                         <img src={skill.srcImage} alt="skill image" className={`h-12`} />
-                        <h1>{skill.name}</h1>
+                        <h1 className={` ${doubleClick == skill.name && 'bg-purple text-white'}`}>{skill.name}</h1>
                     </div>
                 ))
             }

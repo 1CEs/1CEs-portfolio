@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import Button from '../button'
-import MyselfOption from './options/myself'
 import { IOptionContext, OptionContext } from '../../contexts/use-option'
 import MatchOption from './options/match-option'
 

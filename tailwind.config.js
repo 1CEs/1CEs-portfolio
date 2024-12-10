@@ -20,7 +20,8 @@ export default {
           100: "#adaaa3",
           "active": "#bcb9b1"
       },
-      "purple": "#6f75a6"
+      "purple": "#6f75a6",
+      "transparent": "transparent"
     }
   },
   plugins: [],
